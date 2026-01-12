@@ -210,8 +210,8 @@ if (sendMessageBtn) {
         const body = encodeURIComponent(bodyArr.join('\n'));
 
         // Use the email specifically requested by the user
-        const mailtoLink = `mailto:awudangfaith@email.com?subject=${subject}&body=${body}`;
-        
+        const mailtoLink = `mailto:awudangfaith@gmail.com?subject=${subject}&body=${body}`;
+
         window.location.href = mailtoLink;
 
         // Visual feedback
@@ -227,7 +227,7 @@ if (sendMessageBtn) {
                 this.innerHTML = originalText;
                 this.style.background = '';
                 this.disabled = false;
-                
+
                 // Clear fields
                 document.getElementById('name').value = '';
                 document.getElementById('email').value = '';

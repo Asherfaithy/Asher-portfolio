@@ -184,29 +184,59 @@ document.querySelectorAll('.work-card').forEach(card => {
 });
 
 // ===== FORM HANDLING =====
-const contactForm = document.getElementById('contactForm');
+const sendMessageBtn = document.getElementById('sendMessageBtn');
 
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+if (sendMessageBtn) {
+    sendMessageBtn.addEventListener('click', function () {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const project = document.getElementById('project').value;
+        const message = document.getElementById('message').value;
 
-    const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
+        if (!name || !email || !project || !message) {
+            alert('Please fill in all fields before sending.');
+            return;
+        }
 
-    btn.innerHTML = '<span>Sending...</span>';
-    btn.disabled = true;
+        const subject = encodeURIComponent(`Project Inquiry from ${name}`);
+        const bodyArr = [
+            `Name: ${name}`,
+            `Email: ${email}`,
+            `Project Type: ${project}`,
+            '',
+            'Message:',
+            message
+        ];
+        const body = encodeURIComponent(bodyArr.join('\n'));
 
-    setTimeout(() => {
-        btn.innerHTML = '<span>Message Sent! ✓</span>';
-        btn.style.background = '#22c55e';
+        // Use the email specifically requested by the user
+        const mailtoLink = `mailto:awudangfaith@email.com?subject=${subject}&body=${body}`;
+        
+        window.location.href = mailtoLink;
+
+        // Visual feedback
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span>Opening Mail client...</span>';
+        this.disabled = true;
 
         setTimeout(() => {
-            btn.innerHTML = originalText;
-            btn.style.background = '';
-            btn.disabled = false;
-            contactForm.reset();
-        }, 3000);
-    }, 1500);
-});
+            this.innerHTML = '<span>Ready! ✓</span>';
+            this.style.background = '#22c55e';
+
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.background = '';
+                this.disabled = false;
+                
+                // Clear fields
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('project').selectedIndex = 0;
+                document.getElementById('message').value = '';
+            }, 3000);
+        }, 1000);
+    });
+}
 
 // ===== PARALLAX EFFECT ON HERO =====
 window.addEventListener('scroll', () => {

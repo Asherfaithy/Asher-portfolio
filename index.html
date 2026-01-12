@@ -367,15 +367,17 @@
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
                             </a>
-                            <a href="https://t.me/faithy_danniel" target="_blank" class="social-link" aria-label="Telegram">
+                            <a href="https://t.me/faithy_danniel" target="_blank" class="social-link"
+                                aria-label="Telegram">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.891 8.11l-1.92 9.049c-.145.639-.524.796-1.059.496l-2.92-2.154-1.408 1.354c-.156.156-.287.287-.588.287l.206-2.951 5.373-4.853c.234-.208-.052-.323-.362-.117l-6.642 4.18-2.859-.894c-.622-.194-.635-.622.13-.92l11.173-4.305c.517-.186.97.123.826.872z"/>
+                                    <path
+                                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.891 8.11l-1.92 9.049c-.145.639-.524.796-1.059.496l-2.92-2.154-1.408 1.354c-.156.156-.287.287-.588.287l.206-2.951 5.373-4.853c.234-.208-.052-.323-.362-.117l-6.642 4.18-2.859-.894c-.622-.194-.635-.622.13-.92l11.173-4.305c.517-.186.97.123.826.872z" />
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqakvjzd" method="POST">
+                <div class="contact-form" id="contactForm">
                     <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name"
                             required placeholder="What should I call you?"></div>
                     <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email"
@@ -390,11 +392,12 @@
                         </select></div>
                     <div class="form-group"><label for="message">Message</label><textarea id="message" name="message"
                             rows="4" required placeholder="Tell me about your project..."></textarea></div>
-                    <button type="submit" class="btn btn-primary btn-full"><span>Send Message</span><svg width="20"
-                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <button type="button" class="btn btn-primary btn-full" id="sendMessageBtn"><span>Send
+                            Message</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
                             <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
                         </svg></button>
-                </form>
+                </div>
             </div>
         </div>
     </section>

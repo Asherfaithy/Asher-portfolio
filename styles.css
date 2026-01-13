@@ -1304,6 +1304,8 @@ body:hover .cursor-glow {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    position: relative;
+    z-index: 5;
 }
 
 .form-group {

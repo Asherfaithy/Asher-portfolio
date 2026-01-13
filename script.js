@@ -269,7 +269,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== MAGNETIC BUTTON EFFECT =====
-document.querySelectorAll('.btn-primary').forEach(btn => {
+document.querySelectorAll('.btn-primary:not(#sendMessageBtn)').forEach(btn => {
     btn.addEventListener('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;

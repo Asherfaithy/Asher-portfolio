@@ -418,27 +418,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <script>
-function sendEmail(event) {
-  event.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const project = document.getElementById('project').value;
-  const message = document.getElementById('message').value;
-
-  const recipient = "awudangfaith@gmail.com";
-  const subject = encodeURIComponent("Portfolio Inquiry from " + name);
-  
-  const bodyText = "Name: " + name + "\n" +
-                   "Email: " + email + "\n" +
-                   "Project: " + project + "\n\n" +
-                   "Message:\n" + message;
-
-  const body = encodeURIComponent(bodyText);
-
-  window.location.href = "mailto:" + recipient + "?subject=" + subject + "&body=" + body;
-}
 </script>
 
 </body>

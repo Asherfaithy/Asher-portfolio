@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Asher - Writer crafting narratives that stay with you. Explore my works and let's create something together.">
+    <meta name="description"
+        content="Asher - Writer crafting narratives that stay with you. Explore my works and let's create something together.">
     <title>Asher | Writer & Brand Storyteller</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -377,13 +378,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnjjqypl" method="POST">
                     <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name"
                             required placeholder="What should I call you?"></div>
                     <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email"
                             required placeholder="Where can I reach you?"></div>
                     <div class="form-group"><label for="project">Project Type</label><select id="project" name="project"
-                            required>
+                            required feedback>
                             <option value="" disabled selected>What are you looking for?</option>
                             <option value="fiction">Fiction Writing</option>
                             <option value="copywriting">Copywriting</option>
@@ -392,12 +393,12 @@
                         </select></div>
                     <div class="form-group"><label for="message">Message</label><textarea id="message" name="message"
                             rows="4" required placeholder="Tell me about your project..."></textarea></div>
-                    <button type="button" class="btn btn-primary btn-full" id="sendMessageBtn"><span>Send
+                    <button type="submit" class="btn btn-primary btn-full" id="sendMessageBtn"><span>Send
                             Message</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
                         </svg></button>
-                </div>
+                </form>
             </div>
         </div>
     </section>

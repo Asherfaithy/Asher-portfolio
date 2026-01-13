@@ -184,57 +184,48 @@ document.querySelectorAll('.work-card').forEach(card => {
 });
 
 // ===== FORM HANDLING =====
+const contactForm = document.getElementById('contactForm');
 const sendMessageBtn = document.getElementById('sendMessageBtn');
 
-if (sendMessageBtn) {
-    sendMessageBtn.addEventListener('click', function () {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const project = document.getElementById('project').value;
-        const message = document.getElementById('message').value;
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
 
-        if (!name || !email || !project || !message) {
-            alert('Please fill in all fields before sending.');
-            return;
-        }
+        const formData = new FormData(this);
+        const originalText = sendMessageBtn.innerHTML;
 
-        const subject = encodeURIComponent(`Project Inquiry from ${name}`);
-        const bodyArr = [
-            `Name: ${name}`,
-            `Email: ${email}`,
-            `Project Type: ${project}`,
-            '',
-            'Message:',
-            message
-        ];
-        const body = encodeURIComponent(bodyArr.join('\n'));
+        // Visual feedback - Loading
+        sendMessageBtn.innerHTML = '<span>Sending Message...</span>';
+        sendMessageBtn.disabled = true;
 
-        // Use the email specifically requested by the user
-        const mailtoLink = `mailto:awudangfaith@gmail.com?subject=${subject}&body=${body}`;
+        try {
+            const response = await fetch(this.action, {
+                method: this.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-        window.location.href = mailtoLink;
-
-        // Visual feedback
-        const originalText = this.innerHTML;
-        this.innerHTML = '<span>Opening Mail client...</span>';
-        this.disabled = true;
-
-        setTimeout(() => {
-            this.innerHTML = '<span>Ready! ✓</span>';
-            this.style.background = '#22c55e';
-
+            if (response.ok) {
+                // Success feedback
+                sendMessageBtn.innerHTML = '<span>Message Sent! ✓</span>';
+                sendMessageBtn.style.background = '#22c55e';
+                this.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Error feedback
+            sendMessageBtn.innerHTML = '<span>Error! Please try again.</span>';
+            sendMessageBtn.style.background = '#ef4444';
+        } finally {
             setTimeout(() => {
-                this.innerHTML = originalText;
-                this.style.background = '';
-                this.disabled = false;
-
-                // Clear fields
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('project').selectedIndex = 0;
-                document.getElementById('message').value = '';
+                sendMessageBtn.innerHTML = originalText;
+                sendMessageBtn.style.background = '';
+                sendMessageBtn.disabled = false;
             }, 3000);
-        }, 1000);
+        }
     });
 }
 

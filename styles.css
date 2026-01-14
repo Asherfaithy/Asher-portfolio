@@ -704,6 +704,7 @@ body:hover .cursor-glow {
     gap: 40px;
     animation: marquee 30s linear infinite;
     white-space: nowrap;
+    width: max-content;
 }
 
 .marquee-content span {
@@ -711,6 +712,7 @@ body:hover .cursor-glow {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--black);
+    flex-shrink: 0;
 }
 
 .marquee-dot {
@@ -719,8 +721,12 @@ body:hover .cursor-glow {
 }
 
 @keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 20px));
     }
 }
 

@@ -207,11 +207,8 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  )
-}
-
+     );
+};        
 /* ─── Skills ─── */
 function Skills() {
   return (

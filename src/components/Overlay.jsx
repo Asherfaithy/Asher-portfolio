@@ -198,7 +198,7 @@ function About() {
               <p>When I'm not working, I'm usually just watching the world go by and trying to find the 'why' behind the way things are or just appreciating the aura of a cat.</p>
             </div>
             <div className="about-highlights">
-              {['Brand Storyteller', 'Technical Writer', 'Content Strategist', 'Researcher'].map(h => (
+              {['Brand Storyteller', 'Technical Writer', 'Content Strategist', 'Researcher', 'Copywriter'].map(h => (
                 <div key={h} className="highlight-item"><span className="highlight-icon">✦</span><span>{h}</span></div>
               ))}
             </div>

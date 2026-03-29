@@ -35,7 +35,7 @@ function CameraController() {
 
 // ─── Starfield Particles ───
 // Tiny static white and cyan points that twinkle
-function DigitalRain({ count = 1000 }) {
+function DigitalRain({ count = 600 }) {
   const pointsRef = useRef()
 
   const [positions, baseColors, phases] = useMemo(() => {

@@ -118,18 +118,16 @@ function FallingBricksProfile() {
   }, [])
 
   useEffect(() => {
-    let t1, t2, t3;
+    let t2, t3;
     const runCycle = () => {
-      setPhase('hidden_top')
-      t1 = setTimeout(() => setPhase('falling_in'), 100)
-      t2 = setTimeout(() => setPhase('assembled'), 3000)
-      t3 = setTimeout(() => setPhase('falling_out'), 6000)
+      setPhase('falling_in')
+      t2 = setTimeout(() => setPhase('assembled'), 2000)
+      t3 = setTimeout(() => setPhase('falling_out'), 4000)
     }
     runCycle()
-    const interval = setInterval(runCycle, 9000)
+    const interval = setInterval(runCycle, 6000)
     return () => {
       clearInterval(interval)
-      clearTimeout(t1)
       clearTimeout(t2)
       clearTimeout(t3)
     }

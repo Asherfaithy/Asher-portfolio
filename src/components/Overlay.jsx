@@ -186,7 +186,6 @@ function Hero({ triggerGlitch }) {
 function About() {
   return (
     <section className="about" id="about">
-      <div className="about-bg"><div className="about-lines" /></div>
       <div className="container">
         <div className="about-grid">
           <div className="about-content">

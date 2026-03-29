@@ -336,7 +336,7 @@ body:hover .cursor-glow {
 }
 
 .brick {
-    background-image: url('../asher-photo-nobg.png');
+    background-image: url('/asher-photo-nobg.png');
     background-size: 4000% 4000%;
     background-repeat: no-repeat;
     box-shadow: 0 0 1px transparent;

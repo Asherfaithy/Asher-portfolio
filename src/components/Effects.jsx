@@ -6,7 +6,7 @@ import { BlendFunction } from 'postprocessing'
 export default function Effects() {
   return (
     <EffectComposer disableNormalPass>
-      <Noise premultiply blendFunction={BlendFunction.ADD} opacity={0.05} />
+      {/* Noise disabled for background stability */}
     </EffectComposer>
   )
 }

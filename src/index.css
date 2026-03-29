@@ -329,18 +329,19 @@ body:hover .cursor-glow {
     position: absolute;
     inset: 0;
     display: grid;
-    grid-template-columns: repeat(40, 1fr);
-    grid-template-rows: repeat(40, 1fr);
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(25, 1fr);
     z-index: 1;
     mix-blend-mode: normal;
 }
 
 .brick {
     background-image: url('/asher-photo-nobg.png');
-    background-size: 4000% 4000%;
+    background-size: 2500% 2500%;
     background-repeat: no-repeat;
     box-shadow: 0 0 1px transparent;
     border-radius: 50%;
+    will-change: transform, opacity;
 }
 
 .brick.phase-hidden_top {

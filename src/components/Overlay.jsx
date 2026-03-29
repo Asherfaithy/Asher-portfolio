@@ -81,8 +81,20 @@ function Nav({ triggerGlitch }) {
 }
 
 /* ─── Falling Bricks Profile ─── */
-const GRID_SIZE = 40
+const GRID_SIZE = 25
 const TOTAL_BRICKS = GRID_SIZE * GRID_SIZE
+
+const Brick = React.memo(({ phase, brick }) => (
+  <div 
+    className={`brick phase-${phase}`}
+    style={{
+      backgroundPosition: `${brick.bgPosX}% ${brick.bgPosY}%`,
+      transitionDelay: phase === 'hidden_top' ? '0s' : `${brick.delay}s`,
+      '--tx': `${brick.translateX}px`,
+    }}
+  />
+))
+Brick.displayName = 'Brick'
 
 function FallingBricksProfile() {
   const [phase, setPhase] = useState('hidden_top')
@@ -127,15 +139,7 @@ function FallingBricksProfile() {
     <div className="falling-bricks-container">
       <div className="bricks-grid">
         {bricks.map((brick) => (
-          <div 
-            key={brick.id} 
-            className={`brick phase-${phase}`}
-            style={{
-              backgroundPosition: `${brick.bgPosX}% ${brick.bgPosY}%`,
-              transitionDelay: phase === 'hidden_top' ? '0s' : `${brick.delay}s`,
-              '--tx': `${brick.translateX}px`,
-            }}
-          />
+          <Brick key={brick.id} phase={phase} brick={brick} />
         ))}
       </div>
     </div>

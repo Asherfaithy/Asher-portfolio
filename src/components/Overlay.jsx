@@ -195,6 +195,7 @@ function About() {
               <p>I've always been an observer first. I like acting because it forces you to pay attention to the things most people miss, the rhythms of how people actually talk and the small details of how they move when they aren't 'performing.' It's a study of the human mask, and it's that same eye for detail that I bring to my research and writing.</p>
               <p>Beyond that, I just love the act of creating, anything, basically. Whether I'm building a brand story or just making something from scratch, I'm driven by the process of turning an idea into something tangible. I don't want to produce work that sounds like a performance; I want to create things that feel like they belong in the real world.</p>
               <p>When I'm not working, I'm usually just watching the world go by and trying to find the 'why' behind the way things are or just appreciating the aura of a cat.</p>
+            </div>
             <div className="about-highlights">
               {['Brand Storyteller', 'Technical Writer', 'Content Strategist', 'Researcher'].map(h => (
                 <div key={h} className="highlight-item"><span className="highlight-icon">✦</span><span>{h}</span></div>
@@ -205,10 +206,12 @@ function About() {
               <div className="community-item"><strong>SuperteamNG</strong><br />Contributor and State Lead Writer</div>
               <div className="community-item"><strong>Solana Collective</strong><br />Member and Active Contributor</div>
             </div>
-        </div>
           </div>
-     );
-};        
+        </div>
+      </div>
+    </section>
+  )
+}        
 
 /* ─── Skills ─── */
 function Skills() {

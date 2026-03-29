@@ -210,8 +210,8 @@ function About() {
      );
 };        
 
-          /* ─── Skills ─── */
-export function Skills() {
+/* ─── Skills ─── */
+function Skills() {
   return (
     <section className="skills" id="skills">
       <div className="container">

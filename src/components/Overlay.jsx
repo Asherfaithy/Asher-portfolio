@@ -290,7 +290,7 @@ const projects = [
   {
     num: '03', category: 'Article', title: 'Beer, stablecoins and Finna',
     excerpt: 'This article explores "survival economics" in Nigeria, examining how citizens navigate inflation and naira volatility through unconventional means. It highlights the strategic pivot toward stablecoins and the Finna as essential tools for preserving purchasing power.',
-    tags: ['Writing', 'Research'], year: '2025', img: '/finna-article.jpg',
+    tags: ['Writing', 'Research', 'Storytelling'], year: '2025', img: '/finna-article.jpg',
     link: 'https://medium.com/@awudangfaith/beer-stablecoins-and-finna-nigerias-survival-economics-80b566039c12'
   },
   {

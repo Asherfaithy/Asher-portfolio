@@ -211,7 +211,7 @@ function About() {
 };        
 
           /* ─── Skills ─── */
-function Skills() {
+export function Skills() {
   return (
     <section className="skills" id="skills">
       <div className="container">

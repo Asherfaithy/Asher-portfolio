@@ -67,7 +67,7 @@ function DigitalRain({ count = 600 }) {
     const time = state.clock.elapsedTime
     
     for (let i = 0; i < count; i++) {
-      const blink = 0.2 + 0.8 * Math.abs(Math.sin(time * 1.5 + phases[i]))
+      const blink = 0.5 + 0.5 * Math.abs(Math.sin(time * 1.2 + phases[i]))
       colors[i * 3] = baseColors[i * 3] * blink
       colors[i * 3 + 1] = baseColors[i * 3 + 1] * blink
       colors[i * 3 + 2] = baseColors[i * 3 + 2] * blink

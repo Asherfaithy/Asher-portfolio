@@ -15,7 +15,7 @@ export default function App() {
   }, [])
 
   return (
-    <div onMouseMove={handleMouseMove} style={{ width: '100%', minHeight: '100vh' }}>
+    <div onMouseMove={handleMouseMove} style={{ width: '100%', minHeight: '100dvh' }}>
       {/* 3D Canvas — fixed background layer */}
       <div className="canvas-container">
         <Canvas

@@ -161,7 +161,7 @@ function Hero({ triggerGlitch }) {
         <FallingBricksProfile />
 
         <h2 className="hero-subtitle" style={{ height: '1.5em', display: 'flex', alignItems: 'center' }}>
-          <span>Writer ✦ Brand Storyteller</span>
+          <span>Writer ✦ Brand & Content Strategist</span>
         </h2>
 
         <div className="hero-cta">
@@ -193,8 +193,7 @@ function About() {
             <span className="section-label">About Me</span>
             <div className="about-text">
               <blockquote style={{ fontStyle: 'italic', marginBottom: '24px', color: 'var(--white)', borderLeft: '2px solid var(--primary)', paddingLeft: '16px' }}>
-                "Creation begins with writing, and meaning is carried through story."
-              </blockquote>
+                
               <p>I've always been an observer first. I like acting because it forces you to pay attention to the things most people miss, the rhythms of how people actually talk and the small details of how they move when they aren't 'performing.' It's a study of the human mask, and it's that same eye for detail that I bring to my research and writing.</p>
               <p>Beyond that, I just love the act of creating, anything, basically. Whether I'm building a brand story or just making something from scratch, I'm driven by the process of turning an idea into something tangible. I don't want to produce work that sounds like a performance; I want to create things that feel like they belong in the real world.</p>
               <p>When I'm not working, I'm usually just watching the world go by and trying to find the 'why' behind the way things are or just appreciating the aura of a cat.</p>
@@ -280,25 +279,25 @@ const projects = [
   {
     num: '01', category: 'Research Paper', title: 'Cracking Product Market Fit in Harsh Markets', featured: true,
     excerpt: 'A Nigerian Solana startups case study showing how local teams are finding real product-market fit by solving everyday financial problems with fast, low-cost, user-friendly apps that hide blockchain complexity and build trust through clear utility and community-led growth.',
-    tags: ['Writing', 'Blockchain', 'Research'], year: '2025', img: 'project1.jpg',
+    tags: ['Writing', 'Blockchain', 'Research'], year: '2025', img: '/project1.jpg',
     link: 'https://open.substack.com/pub/klausofnifes/p/nigerian-solana-startups-cracking?r=3pfsdi&utm_medium=ios&shareImageVariant=overlay'
   },
   {
     num: '02', category: 'Article', title: 'What Makes a Good Stable Coin?',
     excerpt: 'A concise analysis of what defines a good stablecoin, focusing on stability, trust, and real-world usefulness.',
-    tags: ['Writing', 'Research'], year: '2025', img: 'project2.jpg',
+    tags: ['Writing', 'Research'], year: '2025', img: '/project2.jpg',
     link: 'https://medium.com/@awudangfaith/what-makes-a-good-stable-coin-ff71e5f2ae9f'
   },
   {
     num: '03', category: 'Article', title: 'Beer, stablecoins and Finna',
     excerpt: 'This article explores "survival economics" in Nigeria, examining how citizens navigate inflation and naira volatility through unconventional means. It highlights the strategic pivot toward stablecoins and the Finna as essential tools for preserving purchasing power.',
-    tags: ['Writing', 'Research'], year: '2025', img: 'finna-article.jpg',
+    tags: ['Writing', 'Research'], year: '2025', img: '/finna-article.jpg',
     link: 'https://medium.com/@awudangfaith/beer-stablecoins-and-finna-nigerias-survival-economics-80b566039c12'
   },
   {
     num: '04', category: 'Fiction (Thread)', title: 'The Koyn Evening',
     excerpt: 'A short fiction set in bustling Lagos, using storytelling to show how Koyn helps Nigerians escape P2P stress and scams while paying bills seamlessly in one app.',
-    tags: ['Writing', 'Storytelling', 'Research'], year: '2025', img: 'project4.jpg',
+    tags: ['Writing', 'Storytelling', 'Research'], year: '2025', img: '/project4.jpg',
     link: 'https://x.com/faithy_danniel/status/1999025556621291703?s=46'
   }
 ]

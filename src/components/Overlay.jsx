@@ -205,11 +205,12 @@ function About() {
               <div className="community-item"><strong>SuperteamNG</strong><br />Contributor and State Lead Writer</div>
               <div className="community-item"><strong>Solana Collective</strong><br />Member and Active Contributor</div>
             </div>
-          </div>
         </div>
+          </div>
      );
 };        
-/* ─── Skills ─── */
+
+          /* ─── Skills ─── */
 function Skills() {
   return (
     <section className="skills" id="skills">

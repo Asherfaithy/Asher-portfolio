@@ -728,6 +728,21 @@ body:hover .cursor-glow {
     margin-bottom: 60px;
 }
 
+.skill-icon-3d {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 6px rgba(0, 242, 255, 0.3));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.skill-category:hover .skill-icon-3d {
+    filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.6));
+    transform: scale(1.15);
+}
+
 .skill-category h3 {
     font-family: var(--font-display);
     font-size: 1.15rem;
@@ -735,6 +750,8 @@ body:hover .cursor-glow {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
 }
 
 .skill-list {

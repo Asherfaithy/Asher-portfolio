@@ -222,19 +222,104 @@ function Skills() {
         <div className="section-header centered"><span className="section-label">My Skills</span></div>
         <div className="skills-content">
           <div className="skill-category">
-            <h3>📝 Content Strategy &amp; Brand Storytelling</h3>
+            <h3>
+              <span className="skill-icon-3d">
+                <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="quillGrad" x1="10" y1="5" x2="54" y2="59" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#00f2ff" />
+                      <stop offset="50%" stopColor="#00c4cc" />
+                      <stop offset="100%" stopColor="#0088aa" />
+                    </linearGradient>
+                    <filter id="quillShadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#00f2ff" floodOpacity="0.4" />
+                    </filter>
+                  </defs>
+                  <g filter="url(#quillShadow)">
+                    <path d="M48 6C52 10 54 16 50 22L26 50C24 52 20 54 18 54L10 56L12 48C12 46 14 42 16 40L40 12C44 8 46 6 48 6Z" fill="url(#quillGrad)" opacity="0.9" />
+                    <path d="M48 6C52 10 54 16 50 22L26 50C24 52 20 54 18 54L10 56L12 48" stroke="#00f2ff" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
+                    <path d="M40 12L50 22" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" />
+                    <path d="M10 56Q8 58 6 58Q8 56 10 54" fill="#00f2ff" opacity="0.8" />
+                    <path d="M44 8C46 8 50 12 52 16" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" fill="none" />
+                  </g>
+                </svg>
+              </span>
+              Content Strategy &amp; Brand Storytelling
+            </h3>
             <ul className="skill-list">
               {['Brand Narrative & Creative Writing', 'Technical Writing', 'Editorial Collaboration', 'Long-Form Articles', 'Brand Voice Development'].map(s => <li key={s}>{s}</li>)}
             </ul>
           </div>
           <div className="skill-category">
-            <h3>🎤 Communication &amp; Multimedia</h3>
+            <h3>
+              <span className="skill-icon-3d">
+                <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="micGrad" x1="20" y1="2" x2="44" y2="62" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#00f2ff" />
+                      <stop offset="50%" stopColor="#00c4cc" />
+                      <stop offset="100%" stopColor="#007a99" />
+                    </linearGradient>
+                    <radialGradient id="micShine" cx="35%" cy="25%" r="50%">
+                      <stop offset="0%" stopColor="rgba(255,255,255,0.4)" />
+                      <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                    </radialGradient>
+                    <filter id="micShadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#00f2ff" floodOpacity="0.4" />
+                    </filter>
+                  </defs>
+                  <g filter="url(#micShadow)">
+                    <rect x="24" y="6" width="16" height="28" rx="8" fill="url(#micGrad)" />
+                    <rect x="24" y="6" width="16" height="28" rx="8" fill="url(#micShine)" />
+                    <line x1="28" y1="14" x2="36" y2="14" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
+                    <line x1="28" y1="18" x2="36" y2="18" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
+                    <line x1="28" y1="22" x2="36" y2="22" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
+                    <line x1="28" y1="26" x2="36" y2="26" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
+                    <path d="M18 28V32C18 39.2 23.8 45 31 45H33C40.2 45 46 39.2 46 32V28" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.7" />
+                    <line x1="32" y1="45" x2="32" y2="54" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
+                    <line x1="24" y1="54" x2="40" y2="54" stroke="#00f2ff" strokeWidth="2.5" strokeLinecap="round" opacity="0.8" />
+                    <ellipse cx="32" cy="56" rx="8" ry="2" fill="#00f2ff" opacity="0.15" />
+                  </g>
+                </svg>
+              </span>
+              Communication &amp; Multimedia
+            </h3>
             <ul className="skill-list">
               {['Public Speaking', 'Video Creation', 'Co-hosting (AMAs / Spaces)', 'Community Advocacy'].map(s => <li key={s}>{s}</li>)}
             </ul>
           </div>
           <div className="skill-category">
-            <h3>📊 Ecosystem Research &amp; Analysis</h3>
+            <h3>
+              <span className="skill-icon-3d">
+                <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="graphGrad" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#007a99" />
+                      <stop offset="50%" stopColor="#00c4cc" />
+                      <stop offset="100%" stopColor="#00f2ff" />
+                    </linearGradient>
+                    <filter id="graphShadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#00f2ff" floodOpacity="0.4" />
+                    </filter>
+                  </defs>
+                  <g filter="url(#graphShadow)">
+                    <line x1="12" y1="8" x2="12" y2="52" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
+                    <line x1="12" y1="52" x2="56" y2="52" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
+                    <rect x="18" y="36" width="8" height="16" rx="2" fill="url(#graphGrad)" opacity="0.7" />
+                    <rect x="30" y="24" width="8" height="28" rx="2" fill="url(#graphGrad)" opacity="0.85" />
+                    <rect x="42" y="14" width="8" height="38" rx="2" fill="url(#graphGrad)" opacity="1" />
+                    <rect x="18" y="36" width="8" height="6" rx="2" fill="rgba(255,255,255,0.2)" />
+                    <rect x="30" y="24" width="8" height="6" rx="2" fill="rgba(255,255,255,0.2)" />
+                    <rect x="42" y="14" width="8" height="6" rx="2" fill="rgba(255,255,255,0.2)" />
+                    <circle cx="22" cy="32" r="2.5" fill="#00f2ff" opacity="0.9" />
+                    <circle cx="34" cy="20" r="2.5" fill="#00f2ff" opacity="0.9" />
+                    <circle cx="46" cy="10" r="2.5" fill="#00f2ff" opacity="0.9" />
+                    <polyline points="22,32 34,20 46,10" stroke="#00f2ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.5" strokeDasharray="4 2" />
+                  </g>
+                </svg>
+              </span>
+              Ecosystem Research &amp; Analysis
+            </h3>
             <ul className="skill-list">
               {['Solana Protocol Knowledge', 'Token & Data Analysis', 'Market Research'].map(s => <li key={s}>{s}</li>)}
             </ul>
@@ -434,7 +519,7 @@ function Footer({ triggerGlitch }) {
           </div>
           <div className="footer-bottom">
             <span>© 2026 Asher. All rights reserved.</span>
-            <span>[ SYSTEM . OFFLINE ]</span>
+
           </div>
         </div>
       </div>

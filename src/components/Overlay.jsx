@@ -226,21 +226,32 @@ function Skills() {
               <span className="skill-icon-3d">
                 <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
+                    <linearGradient id="paperGrad" x1="16" y1="8" x2="48" y2="56" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9"/>
+                      <stop offset="100%" stopColor="#d1fcfd" stopOpacity="0.8"/>
+                    </linearGradient>
                     <linearGradient id="quillGrad" x1="10" y1="5" x2="54" y2="59" gradientUnits="userSpaceOnUse">
                       <stop offset="0%" stopColor="#00f2ff" />
                       <stop offset="50%" stopColor="#00c4cc" />
                       <stop offset="100%" stopColor="#0088aa" />
                     </linearGradient>
-                    <filter id="quillShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <filter id="iconShadow" x="-20%" y="-20%" width="140%" height="140%">
                       <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#00f2ff" floodOpacity="0.4" />
                     </filter>
                   </defs>
-                  <g filter="url(#quillShadow)">
-                    <path d="M48 6C52 10 54 16 50 22L26 50C24 52 20 54 18 54L10 56L12 48C12 46 14 42 16 40L40 12C44 8 46 6 48 6Z" fill="url(#quillGrad)" opacity="0.9" />
-                    <path d="M48 6C52 10 54 16 50 22L26 50C24 52 20 54 18 54L10 56L12 48" stroke="#00f2ff" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
-                    <path d="M40 12L50 22" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" />
-                    <path d="M10 56Q8 58 6 58Q8 56 10 54" fill="#00f2ff" opacity="0.8" />
-                    <path d="M44 8C46 8 50 12 52 16" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" fill="none" />
+                  <g filter="url(#iconShadow)">
+                    {/* Paper */}
+                    <path d="M16 8 H40 L50 18 V56 C50 57.1 49.1 58 48 58 H16 C14.9 58 14 57.1 14 56 V10 C14 8.9 14.9 8 16 8 Z" fill="url(#paperGrad)"/>
+                    <path d="M40 8 V18 H50" fill="none" stroke="#00c4cc" strokeWidth="2" strokeLinejoin="round"/>
+                    {/* Lines on paper */}
+                    <line x1="22" y1="24" x2="42" y2="24" stroke="#00c4cc" strokeWidth="2" opacity="0.4" strokeLinecap="round"/>
+                    <line x1="22" y1="32" x2="42" y2="32" stroke="#00c4cc" strokeWidth="2" opacity="0.4" strokeLinecap="round"/>
+                    <line x1="22" y1="40" x2="36" y2="40" stroke="#00c4cc" strokeWidth="2" opacity="0.4" strokeLinecap="round"/>
+                    {/* Quill */}
+                    <path d="M52 14 C56 18 58 24 54 30 L30 58 C28 60 24 62 22 62 L14 64 L16 56 C16 54 18 50 20 48 L44 20 C48 16 50 14 52 14 Z" fill="url(#quillGrad)" opacity="0.95" />
+                    <path d="M52 14 C56 18 58 24 54 30 L30 58 C28 60 24 62 22 62 L14 64 L16 56" stroke="#00f2ff" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.8" />
+                    <path d="M44 20 L54 30" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" />
+                    <path d="M14 64 Q12 66 10 66 Q12 64 14 62" fill="#00f2ff" opacity="0.8" />
                   </g>
                 </svg>
               </span>
@@ -255,30 +266,31 @@ function Skills() {
               <span className="skill-icon-3d">
                 <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
-                    <linearGradient id="micGrad" x1="20" y1="2" x2="44" y2="62" gradientUnits="userSpaceOnUse">
+                    <linearGradient id="micBaseGrad" x1="32" y1="36" x2="32" y2="60" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#007a99" />
+                      <stop offset="100%" stopColor="#004455" />
+                    </linearGradient>
+                    <linearGradient id="micHeadGrad" x1="16" y1="8" x2="48" y2="40" gradientUnits="userSpaceOnUse">
                       <stop offset="0%" stopColor="#00f2ff" />
                       <stop offset="50%" stopColor="#00c4cc" />
-                      <stop offset="100%" stopColor="#007a99" />
+                      <stop offset="100%" stopColor="#0088aa" />
                     </linearGradient>
-                    <radialGradient id="micShine" cx="35%" cy="25%" r="50%">
-                      <stop offset="0%" stopColor="rgba(255,255,255,0.4)" />
-                      <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-                    </radialGradient>
-                    <filter id="micShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <filter id="micShadow2" x="-20%" y="-20%" width="140%" height="140%">
                       <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#00f2ff" floodOpacity="0.4" />
                     </filter>
                   </defs>
-                  <g filter="url(#micShadow)">
-                    <rect x="24" y="6" width="16" height="28" rx="8" fill="url(#micGrad)" />
-                    <rect x="24" y="6" width="16" height="28" rx="8" fill="url(#micShine)" />
-                    <line x1="28" y1="14" x2="36" y2="14" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
-                    <line x1="28" y1="18" x2="36" y2="18" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
-                    <line x1="28" y1="22" x2="36" y2="22" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
-                    <line x1="28" y1="26" x2="36" y2="26" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
-                    <path d="M18 28V32C18 39.2 23.8 45 31 45H33C40.2 45 46 39.2 46 32V28" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.7" />
-                    <line x1="32" y1="45" x2="32" y2="54" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
-                    <line x1="24" y1="54" x2="40" y2="54" stroke="#00f2ff" strokeWidth="2.5" strokeLinecap="round" opacity="0.8" />
-                    <ellipse cx="32" cy="56" rx="8" ry="2" fill="#00f2ff" opacity="0.15" />
+                  <g filter="url(#micShadow2)">
+                    {/* Capsule */}
+                    <rect x="22" y="6" width="20" height="30" rx="10" fill="url(#micHeadGrad)" />
+                    {/* Mesh lines (diagonal or horizontal) */}
+                    <path d="M22 16 H42 M22 22 H42 M22 28 H42 M28 6 V36 M36 6 V36" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+                    <rect x="22" y="6" width="20" height="30" rx="10" fill="none" stroke="#00f2ff" strokeWidth="2" opacity="0.8"/>
+                    {/* Support arms (Shock mount / yoke) */}
+                    <path d="M16 26 V36 C16 44 22 48 32 48 C42 48 48 44 48 36 V26" stroke="#00c4cc" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    {/* Stand and Base */}
+                    <line x1="32" y1="48" x2="32" y2="58" stroke="url(#micBaseGrad)" strokeWidth="4" strokeLinecap="round" />
+                    <path d="M20 58 C20 56 24 56 32 56 C40 56 44 56 44 58 C44 60 40 60 32 60 C24 60 20 60 20 58 Z" fill="url(#micBaseGrad)" />
+                    <path d="M20 58 C20 56 24 56 32 56 C40 56 44 56 44 58" fill="none" stroke="#00f2ff" strokeWidth="1.5" opacity="0.6"/>
                   </g>
                 </svg>
               </span>
@@ -293,28 +305,40 @@ function Skills() {
               <span className="skill-icon-3d">
                 <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
-                    <linearGradient id="graphGrad" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+                    <linearGradient id="panelGrad" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#ffffff" stopOpacity="0.15"/>
+                      <stop offset="100%" stopColor="#00f2ff" stopOpacity="0.05"/>
+                    </linearGradient>
+                    <linearGradient id="lineGrad" x1="10" y1="40" x2="54" y2="10" gradientUnits="userSpaceOnUse">
                       <stop offset="0%" stopColor="#007a99" />
                       <stop offset="50%" stopColor="#00c4cc" />
                       <stop offset="100%" stopColor="#00f2ff" />
                     </linearGradient>
-                    <filter id="graphShadow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#00f2ff" floodOpacity="0.4" />
+                    <filter id="graphShadow3" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#00f2ff" floodOpacity="0.5" />
                     </filter>
                   </defs>
-                  <g filter="url(#graphShadow)">
-                    <line x1="12" y1="8" x2="12" y2="52" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
-                    <line x1="12" y1="52" x2="56" y2="52" stroke="#00f2ff" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
-                    <rect x="18" y="36" width="8" height="16" rx="2" fill="url(#graphGrad)" opacity="0.7" />
-                    <rect x="30" y="24" width="8" height="28" rx="2" fill="url(#graphGrad)" opacity="0.85" />
-                    <rect x="42" y="14" width="8" height="38" rx="2" fill="url(#graphGrad)" opacity="1" />
-                    <rect x="18" y="36" width="8" height="6" rx="2" fill="rgba(255,255,255,0.2)" />
-                    <rect x="30" y="24" width="8" height="6" rx="2" fill="rgba(255,255,255,0.2)" />
-                    <rect x="42" y="14" width="8" height="6" rx="2" fill="rgba(255,255,255,0.2)" />
-                    <circle cx="22" cy="32" r="2.5" fill="#00f2ff" opacity="0.9" />
-                    <circle cx="34" cy="20" r="2.5" fill="#00f2ff" opacity="0.9" />
-                    <circle cx="46" cy="10" r="2.5" fill="#00f2ff" opacity="0.9" />
-                    <polyline points="22,32 34,20 46,10" stroke="#00f2ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.5" strokeDasharray="4 2" />
+                  <g filter="url(#graphShadow3)">
+                    {/* Dashboard Panel */}
+                    <rect x="6" y="8" width="52" height="48" rx="6" fill="url(#panelGrad)" stroke="#00c4cc" strokeWidth="1.5" strokeOpacity="0.5" />
+                    {/* Grid Lines */}
+                    <line x1="16" y1="16" x2="16" y2="48" stroke="rgba(0, 242, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
+                    <line x1="32" y1="16" x2="32" y2="48" stroke="rgba(0, 242, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
+                    <line x1="48" y1="16" x2="48" y2="48" stroke="rgba(0, 242, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
+                    <line x1="12" y1="44" x2="52" y2="44" stroke="rgba(0, 242, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
+                    <line x1="12" y1="30" x2="52" y2="30" stroke="rgba(0, 242, 255, 0.2)" strokeWidth="1" strokeDasharray="2 2" />
+                    {/* Smooth Curved Line Chart */}
+                    <path d="M12 40 C 20 40, 24 24, 32 24 C 40 24, 46 12, 52 12" fill="none" stroke="url(#lineGrad)" strokeWidth="3" strokeLinecap="round" />
+                    {/* Area under the curve */}
+                    <path d="M12 40 C 20 40, 24 24, 32 24 C 40 24, 46 12, 52 12 L52 48 L12 48 Z" fill="url(#lineGrad)" opacity="0.2" />
+                    {/* Data Nodes */}
+                    <circle cx="12" cy="40" r="3" fill="#00f2ff" />
+                    <circle cx="32" cy="24" r="3" fill="#00f2ff" />
+                    <circle cx="52" cy="12" r="3" fill="#00f2ff" />
+                    {/* Glow effect on nodes */}
+                    <circle cx="12" cy="40" r="5" fill="#00f2ff" opacity="0.3" />
+                    <circle cx="32" cy="24" r="5" fill="#00f2ff" opacity="0.3" />
+                    <circle cx="52" cy="12" r="5" fill="#00f2ff" opacity="0.3" />
                   </g>
                 </svg>
               </span>
